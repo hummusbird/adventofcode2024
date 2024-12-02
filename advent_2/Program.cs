@@ -1,4 +1,6 @@
-﻿namespace advent_2;
+﻿using System.Threading.Tasks;
+
+namespace advent_2;
 
 class Program
 {
@@ -8,7 +10,7 @@ class Program
         int p1SafeReports = 0;
         int p2SafeReports = 0;
 
-        reports.ForEach(report =>
+        Parallel.ForEach(reports, report =>
         {
             bool isAscending = false;
             bool safe = true;
